@@ -1,0 +1,6 @@
+{
+  "name": "STARK FITNESS",
+  "description": "STARK FITNESS - Build Your Strength. Transform Your Life. Premier gym, strength training, and dedicated fitness batches in Nileshwar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
