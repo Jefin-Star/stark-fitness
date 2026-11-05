@@ -26,10 +26,10 @@ export const GYM_CONTACT = {
   instagramHandle: "@stark_fitness_gym_official",
   address: "STARK GYM & FITNESS, Nileshwar, Kasaragod, Kerala, India",
   googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.0775609217894!2d75.1368821!3d12.2594108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba47b20d50ea205%3A0x78d91d9afa38e188!2sSTARK%20GYM%20%26%20FITNESS!5e1!3m2!1sen!2sin!4v1793855549637!5m2!1sen!2sin",
-  logoSrc: "/assets/aistudio/fb4e235f-b132-458d-a356-b75146b38ec6_a83811e3.jpg",
-  heroImage: "/src/assets/images/stark_hero_gym_1793855947976.jpg",
-  equipmentImage: "/src/assets/images/stark_gym_equipment_1793855947750.jpg",
-  coachingImage: "/src/assets/images/stark_strength_coaching_1793855947826.jpg",
+  logoSrc: "./images/logo.jpg",
+  heroImage: "./images/hero_gym.jpg",
+  equipmentImage: "./images/gym_equipment.jpg",
+  coachingImage: "./images/strength_coaching.jpg",
 };
 
 export const GYM_SCHEDULES = [
@@ -249,7 +249,7 @@ export const TRAINER_PROFILES: TrainerProfile[] = [
     name: 'Nisha Balakrishnan',
     role: 'Female Personal Trainer',
     experience: '8 Years Experience',
-    image: '/assets/aistudio/4669fdeb-cb05-41a3-a245-c76ea5167404_47d7690a.jpg',
+    image: './images/nisha_balakrishnan.jpg',
     specializations: ['Aerobic Fitness', 'Yoga & Flexibility', 'Mind-Body Wellness'],
     certifications: ['Diploma in Yoga', 'NSDC Certified (National Skill Development Corporation)'],
     bio: 'With over 8 years of professional coaching experience, Nisha Balakrishnan blends the mindfulness and core flexibility of classical yoga with high-energy aerobic conditioning. She specializes in helping women build core stability, improve cardiovascular endurance, and develop sustainable, injury-free health habits.',
@@ -266,7 +266,7 @@ export const TRAINER_PROFILES: TrainerProfile[] = [
     name: 'Praseena Biju',
     role: 'Certified Female Fitness Trainer',
     experience: '6 Years Experience',
-    image: '/assets/aistudio/47ef650b-398e-4732-ae9f-e04ec10a58e4_170a4526.jpg',
+    image: './images/praseena_biju.jpg',
     specializations: ['Fitness & Aerobics Training', 'Body Toning', 'Functional Resistance'],
     certifications: ['Certified by Max Impact Fitness Academy', 'Aerobics & Fitness Conditioning'],
     bio: 'Praseena Biju brings 6 years of dynamic fitness and aerobics training expertise. Certified by Max Impact Fitness Academy, she is passionate about empowering clients to smash fitness barriers through energetic, result-oriented aerobic sessions and functional resistance training.',
@@ -299,7 +299,7 @@ export const FOUNDERS_DATA: FounderProfile[] = [
     name: 'Biju Kuruvat',
     role: 'Founder & Coach',
     titleBadge: 'Champion Athlete & Master Coach',
-    image: '/assets/aistudio/1d3febd4-e23c-4804-a912-69d831f6a2a7_eb19a2e8.jpg',
+    image: './images/biju_kuruvat.jpg',
     experienceHeadline: '26 Years Training Experience · 15 Years in Dubai',
     credentials: [
       'Two-Time Kannur University Title Winner',
@@ -324,7 +324,7 @@ export const FOUNDERS_DATA: FounderProfile[] = [
     name: 'Balakrishnan',
     role: 'Partner',
     titleBadge: 'Co-Founder & Fitness Visionary',
-    image: '/assets/aistudio/53014d38-40ea-4fc1-8494-b045da8e2615_df65f45d.jpg',
+    image: './images/balakrishnan.jpg',
     experienceHeadline: 'Community Leadership · Lifelong Fitness Pillar',
     credentials: [
       'Co-Founder & Partner, STARK FITNESS Nileshwar',
