@@ -11,7 +11,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onJoinClick }) => {
 
   const navLinks = [
     { label: 'About', href: '#about' },
-    { label: 'Founders', href: '#founders' },
+    { label: 'Founder', href: '#founders' },
     { label: 'Trainers', href: '#trainers' },
     { label: 'Plans & Pricing', href: '#plans' },
     { label: 'Contact', href: '#contact' },

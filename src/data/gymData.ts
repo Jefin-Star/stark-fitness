@@ -319,31 +319,6 @@ export const FOUNDERS_DATA: FounderProfile[] = [
     ],
     quote: 'True strength is forged through relentless discipline, precise biomechanics, and consistency. STARK FITNESS was founded to bring world-class training standards to our hometown of Nileshwar.',
   },
-  {
-    id: 'balakrishnan',
-    name: 'Balakrishnan',
-    role: 'Partner',
-    titleBadge: 'Co-Founder & Fitness Visionary',
-    image: './images/balakrishnan.jpg',
-    experienceHeadline: 'Community Leadership · Lifelong Fitness Pillar',
-    credentials: [
-      'Co-Founder & Partner, STARK FITNESS Nileshwar',
-      'Promoter of Healthy Living & Community Strength Culture',
-      'Champion of Accessible, World-Class Training Facilities',
-      'Dedicated Advocate for Women & Youth Fitness Empowerment',
-    ],
-    certifications: [
-      'Gym Facility Operations & Safety Leadership',
-      'Athletic Community Development Leader',
-    ],
-    careerHighlights: [
-      'Instrumental in architecting Nileshwar’s premier fitness environment',
-      'Spearheading the dedicated Ladies Exclusive batch initiative',
-      'Dedicated to providing affordable student and couple packages',
-      'Fostering a welcoming, ego-free brotherhood and sisterhood in fitness',
-    ],
-    quote: 'We built STARK FITNESS not just as a gym, but as a transformative haven where people of all ages can discover their full physical potential with dignity, safety, and modern equipment.',
-  },
 ];
 
 

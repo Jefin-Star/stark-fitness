@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
                 <a href="#about" className="hover:text-cyan-400 transition-colors">About Our Gym</a>
               </li>
               <li>
-                <a href="#founders" className="hover:text-cyan-400 transition-colors">Meet the Founders</a>
+                <a href="#founders" className="hover:text-cyan-400 transition-colors">Meet the Founder</a>
               </li>
               <li>
                 <a href="#trainers" className="hover:text-cyan-400 transition-colors">Certified Trainers</a>

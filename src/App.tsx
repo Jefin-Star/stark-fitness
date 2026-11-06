@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { FoundersSection } from './components/FoundersSection';
 import { TrainerProfiles } from './components/TrainerProfiles';
 import { Facilities } from './components/Facilities';
 import { MembershipPlans } from './components/MembershipPlans';
@@ -61,13 +60,10 @@ export default function App() {
         {/* 2. About Our Gym */}
         <About />
 
-        {/* 3. Meet the Founders: Biju Kuruvat & Balakrishnan */}
-        <FoundersSection />
-
-        {/* 4. Certified Trainer Profiles: Nisha Balakrishnan & Praseena Biju */}
+        {/* 3. Certified Trainer Profiles: Nisha Balakrishnan & Praseena Biju */}
         <TrainerProfiles onBookTrainer={handleBookTrainer} />
 
-        {/* 5. Facilities & Equipment Section */}
+        {/* 4. Facilities & Equipment Section */}
         <Facilities />
 
         {/* 6. Membership Plans & Batch Schedules */}
