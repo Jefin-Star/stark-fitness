@@ -1,179 +1,137 @@
 import React from 'react';
 import { 
-  Trophy, 
-  Medal, 
-  Award, 
-  ShieldCheck, 
-  HeartPulse, 
-  Clock, 
-  Globe2, 
-  Quote, 
-  MessageSquare
+  Crown, 
+  CheckCircle2, 
+  MessageSquare, 
+  Dumbbell, 
+  Sparkles, 
+  ShieldCheck 
 } from 'lucide-react';
-import { FOUNDERS_DATA, GYM_CONTACT } from '../data/gymData';
+import { GYM_CONTACT, FOUNDERS_DATA } from '../data/gymData';
 
-export const FoundersSection: React.FC = () => {
+interface FoundersSectionProps {
+  onSelectPT?: () => void;
+}
+
+export const FoundersSection: React.FC<FoundersSectionProps> = ({ onSelectPT }) => {
   const biju = FOUNDERS_DATA[0];
+
+  const qualifications = [
+    'Two time Kannur University title winner (1996 97 and 1997 98)',
+    'Mr. Kerala silver medalist (1995 96)',
+    'Mr. Kasaragod Junior title holder (1996 97)',
+    'Two time Kannur University powerlifting champion',
+    '26 years experience in fitness training',
+    '15 years international experience in Dubai',
+    'NSDC certified',
+    'BCLS CPR certified',
+  ];
 
   return (
     <section id="founders" className="py-24 bg-[#070b12] relative overflow-hidden">
-      {/* Background radial cyan glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none" />
+      {/* Background ambient radial glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center justify-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-3">
-            <span>Leadership & Vision</span>
-            <span aria-hidden="true" className="text-slate-600">/</span>
-            <span>The Power Behind STARK FITNESS</span>
-          </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight uppercase mb-4">
-            Meet the <span className="text-cyan-400">Founders</span>
-          </h2>
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            The driving force behind STARK FITNESS. Combining over two decades of championship bodybuilding, international coaching in Dubai, and deep local community dedication to bring world-class fitness to Nileshwar.
-          </p>
-        </div>
-
-        {/* Dark Card Container with Blue Glowing Moving Light Border Effect */}
-        <div className="max-w-3xl mx-auto">
+        {/* Animated Blue Glowing Border Wrapper */}
+        <div className="relative p-[2.5px] rounded-3xl overflow-hidden group shadow-2xl">
           
-          {/* ============================================================== */}
-          {/* CARD 1: BIJU KURUVAT (Founder and Coach)                      */}
-          {/* ============================================================== */}
-          <div className="relative p-[2.5px] rounded-3xl overflow-hidden group shadow-2xl">
+          {/* Blue glowing, moving light border effect */}
+          <div 
+            className="absolute inset-[-150%] animate-glow-border pointer-events-none"
+            style={{
+              background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 240deg, #0284c7 280deg, #00d2ff 325deg, #38bdf8 345deg, #00d2ff 360deg)',
+            }}
+          />
+          
+          {/* Ambient cyan glow backdrop */}
+          <div className="absolute inset-0 rounded-3xl bg-cyan-500/15 blur-xl group-hover:bg-cyan-500/25 transition-all duration-500 pointer-events-none animate-pulse-glow" />
+
+          {/* Inner Dark Card */}
+          <div className="relative rounded-[22px] bg-[#0c1220] p-6 sm:p-10 text-center z-10 border border-slate-800/90 backdrop-blur-md">
             
-            {/* Blue glowing, moving light border effect */}
-            <div 
-              className="absolute inset-[-150%] animate-glow-border pointer-events-none"
-              style={{
-                background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 240deg, #0284c7 280deg, #00d2ff 325deg, #38bdf8 345deg, #00d2ff 360deg)',
-              }}
-            />
-            
-            {/* Ambient cyan glow backdrop */}
-            <div className="absolute inset-0 rounded-3xl bg-cyan-500/15 blur-xl group-hover:bg-cyan-500/25 transition-all duration-500 pointer-events-none animate-pulse-glow" />
-
-            {/* Inner Dark Card */}
-            <div className="relative rounded-[22px] bg-[#0c1220] p-7 sm:p-9 h-full flex flex-col justify-between z-10 border border-slate-800/90 backdrop-blur-md">
-              <div>
-                
-                {/* Header: Photo + Core Identity */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-800/90 mb-6">
-                  {/* Portrait */}
-                  <div className="relative shrink-0">
-                    <div className="w-36 h-48 sm:w-40 sm:h-52 rounded-2xl overflow-hidden border-2 border-cyan-400/80 shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-colors">
-                      <img
-                        src={biju.image}
-                        alt={biju.name}
-                        className="w-full h-full object-cover object-top filter brightness-95 group-hover:scale-105 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    {/* Badge */}
-                    <div className="absolute -bottom-2.5 -right-2.5 bg-gradient-to-r from-cyan-500 to-sky-400 text-black p-2 rounded-xl shadow-lg">
-                      <Trophy className="w-4 h-4 fill-black" />
-                    </div>
-                  </div>
-
-                  {/* Title & Experience */}
-                  <div className="text-center sm:text-left flex-1">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/40 text-[11px] font-bold text-cyan-300 uppercase tracking-wider mb-2">
-                      <Award className="w-3.5 h-3.5 text-cyan-400" />
-                      <span>{biju.role}</span>
-                    </div>
-
-                    <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-wide uppercase mb-1">
-                      {biju.name}
-                    </h3>
-                    
-                    <p className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-3">
-                      {biju.titleBadge}
-                    </p>
-
-                    {/* Key Experience Stats */}
-                    <div className="space-y-1.5 text-xs text-slate-300">
-                      <div className="flex items-center justify-center sm:justify-start gap-2">
-                        <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
-                        <span className="font-bold text-white">26 Years Training Experience</span>
-                      </div>
-                      <div className="flex items-center justify-center sm:justify-start gap-2">
-                        <Globe2 className="w-4 h-4 text-cyan-400 shrink-0" />
-                        <span className="text-slate-200">15 Years in Dubai (International Fitness)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Championship Titles & Credentials */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
-                    <Medal className="w-4 h-4 text-amber-400" />
-                    <span>Championship Titles & Honors</span>
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {biju.credentials.map((title, idx) => (
-                      <div 
-                        key={idx} 
-                        className="p-2.5 rounded-xl bg-[#070b14] border border-slate-800/80 flex items-start gap-2 text-xs text-slate-200"
-                      >
-                        <Trophy className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
-                        <span className="font-medium leading-snug">{title}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Professional Certifications */}
-                <div className="mb-6">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-cyan-400" />
-                    <span>Accreditations & Certifications</span>
-                  </h4>
-                  <div className="space-y-2">
-                    {biju.certifications.map((cert, idx) => (
-                      <div 
-                        key={idx} 
-                        className="flex items-center gap-2.5 text-xs text-slate-300 p-2 rounded-lg bg-[#070b14]/70 border border-slate-800/60"
-                      >
-                        <HeartPulse className="w-4 h-4 text-cyan-400 shrink-0" />
-                        <span className="font-semibold text-white">{cert}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Founder Quote */}
-                <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/30 relative mb-6">
-                  <Quote className="w-5 h-5 text-cyan-400/40 absolute top-3 right-3" />
-                  <p className="text-xs text-slate-300 italic leading-relaxed pr-6">
-                    "{biju.quote}"
-                  </p>
-                </div>
-
-              </div>
-
-              {/* Action Button */}
-              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-4">
-                <div className="text-xs text-slate-400">
-                  Head Coach · STARK FITNESS
-                </div>
-                <a
-                  href={`https://wa.me/${GYM_CONTACT.whatsAppNumber}?text=${encodeURIComponent(
-                    'Hello Coach Biju Kuruvat, I would like to inquire about training programs and personal coaching at STARK FITNESS.'
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 shadow-md shadow-cyan-500/20 transition-all cursor-pointer"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 fill-black" />
-                  <span>Connect with Coach</span>
-                </a>
-              </div>
-
+            {/* 1. Pill shaped badge above the photo */}
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cyan-950/80 border border-cyan-400/60 shadow-lg shadow-cyan-500/20 text-xs sm:text-sm font-extrabold tracking-widest text-cyan-300 uppercase mb-8">
+              <Sparkles className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>MASTER COACH & HEAD OF FITNESS</span>
             </div>
+
+            {/* 2. Framed Photo of Biju Kuruvat */}
+            <div className="relative mx-auto w-full max-w-sm sm:max-w-md rounded-2xl overflow-hidden border-2 border-cyan-400/80 shadow-2xl shadow-cyan-500/20 mb-6">
+              <img
+                src={biju.image}
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/assets/aistudio/1d3febd4-e23c-4804-a912-69d831f6a2a7_eb19a2e8.jpg';
+                }}
+                alt="BIJU KURUVAT - Founder & Coach"
+                className="w-full h-auto max-h-[500px] object-cover object-top filter brightness-95"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
+            {/* 3. Card below photo: Crown Icon, Name 'BIJU KURUVAT', Title 'FOUNDER & COACH' */}
+            <div className="max-w-md mx-auto p-4 sm:p-5 rounded-xl bg-[#070b14]/90 border border-slate-800 flex items-center justify-center gap-3.5 mb-8 shadow-inner">
+              <Crown className="w-7 h-7 sm:w-8 sm:h-8 text-amber-400 fill-amber-400/20 shrink-0" />
+              <div className="text-left">
+                <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-wider uppercase leading-none">
+                  BIJU KURUVAT
+                </h3>
+                <p className="text-xs sm:text-sm font-extrabold text-cyan-400 tracking-widest uppercase mt-1">
+                  FOUNDER & COACH
+                </p>
+              </div>
+            </div>
+
+            {/* 4. Section titled 'VERIFIED CREDENTIALS & CERTIFICATIONS' */}
+            <div className="pt-6 border-t border-slate-800/80 text-left">
+              <div className="flex items-center justify-center sm:justify-start gap-2.5 mb-6">
+                <ShieldCheck className="w-5 h-5 text-cyan-400 shrink-0" />
+                <h4 className="font-display font-extrabold text-base sm:text-lg text-white uppercase tracking-wider text-center sm:text-left">
+                  VERIFIED CREDENTIALS & CERTIFICATIONS
+                </h4>
+              </div>
+
+              {/* Grid of Qualifications with Checkmark Icons */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {qualifications.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3.5 rounded-xl bg-[#070b14] border border-slate-800/80 flex items-start gap-3 hover:border-cyan-500/40 transition-colors"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-slate-200 font-medium leading-snug">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 5. Buttons: 'CHAT WITH COACH' and '1 ON 1 PT DETAILS' */}
+            <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={`https://wa.me/${GYM_CONTACT.whatsAppNumber}?text=${encodeURIComponent(
+                  'Hello Coach Biju Kuruvat, I would like to connect with you regarding fitness training at STARK FITNESS.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-xs sm:text-sm font-extrabold uppercase tracking-wider text-black bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-300 hover:from-cyan-300 hover:to-sky-200 shadow-lg shadow-cyan-500/25 active:scale-98 transition-all cursor-pointer"
+              >
+                <MessageSquare className="w-4 h-4 fill-black text-black" />
+                <span>CHAT WITH COACH</span>
+              </a>
+
+              <button
+                type="button"
+                onClick={onSelectPT}
+                className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white bg-slate-900/90 hover:bg-slate-800 border border-cyan-400/50 hover:border-cyan-400 shadow-lg shadow-cyan-500/10 active:scale-98 transition-all cursor-pointer"
+              >
+                <Dumbbell className="w-4 h-4 text-cyan-400" />
+                <span>1 ON 1 PT DETAILS</span>
+              </button>
+            </div>
+
           </div>
 
         </div>

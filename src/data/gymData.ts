@@ -302,10 +302,14 @@ export const FOUNDERS_DATA: FounderProfile[] = [
     image: './images/biju_kuruvat.jpg',
     experienceHeadline: '26 Years Training Experience · 15 Years in Dubai',
     credentials: [
-      'Two-Time Kannur University Title Winner',
-      'Mr. Kerala Silver Medalist',
-      'Mr. Kasaragod Junior Title Holder',
-      'Powerlifting Champion',
+      'Two time Kannur University title winner (1996 97 and 1997 98)',
+      'Mr. Kerala silver medalist (1995 96)',
+      'Mr. Kasaragod Junior title holder (1996 97)',
+      'Two time Kannur University powerlifting champion',
+      '26 years experience in fitness training',
+      '15 years international experience in Dubai',
+      'NSDC certified',
+      'BCLS CPR certified',
     ],
     certifications: [
       'NSDC Certified Fitness Trainer',
