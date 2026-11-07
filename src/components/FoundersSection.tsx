@@ -16,14 +16,15 @@ interface FoundersSectionProps {
 export const FoundersSection: React.FC<FoundersSectionProps> = ({ onSelectPT }) => {
   const biju = FOUNDERS_DATA[0];
 
-  const qualifications = [
+  const qualifications = biju.credentials || [
     'Two time Kannur University title winner (1996 97 and 1997 98)',
     'Mr. Kerala silver medalist (1995 96)',
     'Mr. Kasaragod Junior title holder (1996 97)',
     'Two time Kannur University powerlifting champion',
     '26 years experience in fitness training',
     '15 years international experience in Dubai',
-    'NSDC certified',
+    'NSDC certified fitness trainer',
+    'Diploma in fitness from MaxIMPACT FITNESS Academy',
     'BCLS CPR certified',
   ];
 

@@ -308,11 +308,13 @@ export const FOUNDERS_DATA: FounderProfile[] = [
       'Two time Kannur University powerlifting champion',
       '26 years experience in fitness training',
       '15 years international experience in Dubai',
-      'NSDC certified',
+      'NSDC certified fitness trainer',
+      'Diploma in fitness from MaxIMPACT FITNESS Academy',
       'BCLS CPR certified',
     ],
     certifications: [
       'NSDC Certified Fitness Trainer',
+      'Diploma in Fitness from MaxIMPACT FITNESS Academy',
       'BCLS CPR Certified (Basic Cardiac Life Support)',
     ],
     careerHighlights: [
