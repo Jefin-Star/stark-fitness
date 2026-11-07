@@ -30,15 +30,19 @@ export const FoundersSection: React.FC = () => {
             <span>The Power Behind STARK FITNESS</span>
           </div>
           <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight uppercase mb-4">
-            Meet the <span className="text-cyan-400">Founder & Coach</span>
+            Meet the <span className="text-cyan-400">Founders</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            The master strength coach behind STARK FITNESS. Combining 26 years of championship bodybuilding, powerlifting titles, and 15 years of international coaching in Dubai to bring world-class training standards to Nileshwar.
+            The driving force behind STARK FITNESS. Combining over two decades of championship bodybuilding, international coaching in Dubai, and deep local community dedication to bring world-class fitness to Nileshwar.
           </p>
         </div>
 
-        {/* Centered Dark Card with Blue Glowing Moving Light Border Effect */}
+        {/* Dark Card Container with Blue Glowing Moving Light Border Effect */}
         <div className="max-w-3xl mx-auto">
+          
+          {/* ============================================================== */}
+          {/* CARD 1: BIJU KURUVAT (Founder and Coach)                      */}
+          {/* ============================================================== */}
           <div className="relative p-[2.5px] rounded-3xl overflow-hidden group shadow-2xl">
             
             {/* Blue glowing, moving light border effect */}
@@ -53,14 +57,14 @@ export const FoundersSection: React.FC = () => {
             <div className="absolute inset-0 rounded-3xl bg-cyan-500/15 blur-xl group-hover:bg-cyan-500/25 transition-all duration-500 pointer-events-none animate-pulse-glow" />
 
             {/* Inner Dark Card */}
-            <div className="relative rounded-[22px] bg-[#0c1220] p-7 sm:p-10 h-full flex flex-col justify-between z-10 border border-slate-800/90 backdrop-blur-md">
+            <div className="relative rounded-[22px] bg-[#0c1220] p-7 sm:p-9 h-full flex flex-col justify-between z-10 border border-slate-800/90 backdrop-blur-md">
               <div>
                 
                 {/* Header: Photo + Core Identity */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-6 border-b border-slate-800/90 mb-6">
                   {/* Portrait */}
                   <div className="relative shrink-0">
-                    <div className="w-36 h-48 sm:w-44 sm:h-56 rounded-2xl overflow-hidden border-2 border-cyan-400/80 shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-colors">
+                    <div className="w-36 h-48 sm:w-40 sm:h-52 rounded-2xl overflow-hidden border-2 border-cyan-400/80 shadow-xl shadow-cyan-500/20 group-hover:border-cyan-400 transition-colors">
                       <img
                         src={biju.image}
                         alt={biju.name}
@@ -68,7 +72,7 @@ export const FoundersSection: React.FC = () => {
                         referrerPolicy="no-referrer"
                       />
                     </div>
-                    {/* Trophy Badge */}
+                    {/* Badge */}
                     <div className="absolute -bottom-2.5 -right-2.5 bg-gradient-to-r from-cyan-500 to-sky-400 text-black p-2 rounded-xl shadow-lg">
                       <Trophy className="w-4 h-4 fill-black" />
                     </div>
@@ -81,16 +85,16 @@ export const FoundersSection: React.FC = () => {
                       <span>{biju.role}</span>
                     </div>
 
-                    <h3 className="font-display font-black text-2xl sm:text-4xl text-white tracking-wide uppercase mb-1">
+                    <h3 className="font-display font-black text-2xl sm:text-3xl text-white tracking-wide uppercase mb-1">
                       {biju.name}
                     </h3>
                     
-                    <p className="text-xs sm:text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
+                    <p className="text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-3">
                       {biju.titleBadge}
                     </p>
 
                     {/* Key Experience Stats */}
-                    <div className="space-y-2 text-xs sm:text-sm text-slate-300">
+                    <div className="space-y-1.5 text-xs text-slate-300">
                       <div className="flex items-center justify-center sm:justify-start gap-2">
                         <Clock className="w-4 h-4 text-cyan-400 shrink-0" />
                         <span className="font-bold text-white">26 Years Training Experience</span>
@@ -113,9 +117,9 @@ export const FoundersSection: React.FC = () => {
                     {biju.credentials.map((title, idx) => (
                       <div 
                         key={idx} 
-                        className="p-3 rounded-xl bg-[#070b14] border border-slate-800/80 flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"
+                        className="p-2.5 rounded-xl bg-[#070b14] border border-slate-800/80 flex items-start gap-2 text-xs text-slate-200"
                       >
-                        <Trophy className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                        <Trophy className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
                         <span className="font-medium leading-snug">{title}</span>
                       </div>
                     ))}
@@ -128,11 +132,11 @@ export const FoundersSection: React.FC = () => {
                     <ShieldCheck className="w-4 h-4 text-cyan-400" />
                     <span>Accreditations & Certifications</span>
                   </h4>
-                  <div className="space-y-2.5">
+                  <div className="space-y-2">
                     {biju.certifications.map((cert, idx) => (
                       <div 
                         key={idx} 
-                        className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300 p-2.5 rounded-lg bg-[#070b14]/70 border border-slate-800/60"
+                        className="flex items-center gap-2.5 text-xs text-slate-300 p-2 rounded-lg bg-[#070b14]/70 border border-slate-800/60"
                       >
                         <HeartPulse className="w-4 h-4 text-cyan-400 shrink-0" />
                         <span className="font-semibold text-white">{cert}</span>
@@ -142,9 +146,9 @@ export const FoundersSection: React.FC = () => {
                 </div>
 
                 {/* Founder Quote */}
-                <div className="p-4 sm:p-5 rounded-xl bg-cyan-950/20 border border-cyan-500/30 relative mb-6">
+                <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/30 relative mb-6">
                   <Quote className="w-5 h-5 text-cyan-400/40 absolute top-3 right-3" />
-                  <p className="text-xs sm:text-sm text-slate-300 italic leading-relaxed pr-6">
+                  <p className="text-xs text-slate-300 italic leading-relaxed pr-6">
                     "{biju.quote}"
                   </p>
                 </div>
@@ -152,9 +156,9 @@ export const FoundersSection: React.FC = () => {
               </div>
 
               {/* Action Button */}
-              <div className="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between gap-4">
                 <div className="text-xs text-slate-400">
-                  Head Coach & Founder · STARK FITNESS Nileshwar
+                  Head Coach · STARK FITNESS
                 </div>
                 <a
                   href={`https://wa.me/${GYM_CONTACT.whatsAppNumber}?text=${encodeURIComponent(
@@ -162,15 +166,16 @@ export const FoundersSection: React.FC = () => {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 shadow-md shadow-cyan-500/20 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-black bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 shadow-md shadow-cyan-500/20 transition-all cursor-pointer"
                 >
-                  <MessageSquare className="w-4 h-4 fill-black" />
-                  <span>Connect with Coach Biju</span>
+                  <MessageSquare className="w-3.5 h-3.5 fill-black" />
+                  <span>Connect with Coach</span>
                 </a>
               </div>
 
             </div>
           </div>
+
         </div>
 
       </div>
